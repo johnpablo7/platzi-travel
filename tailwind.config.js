@@ -8,16 +8,21 @@ module.exports = {
         secondary: "#8FA206",
         tertiary: "#61AEC9",
       },
+      backgroundColor: {
+        primary: "#CC2D4A",
+        secondary: "#8FA206",
+        tertiary: "#61AEC9",
+      },
       fontFamily: {
         Montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
-        sanFrancisco: "url('../img/sanFrancisco.jpg')",
-        sanFranciscoDesktop: "url('../img/sanFranciscoDesktop.jpg')",
+        "san-francisco": "url('../img/san-francisco.jpg')",
+        "san-francisco-desktop": "url('../img/san-francisco-desktop.jpg')",
         yosemite: "url('../img/yosemite.jpg')",
-        LA: "url('../img/LA.jpg')",
+        la: "url('../img/la.jpg')",
         seattle: "url('../img/seattle.jpg')",
-        new_york: "url('../img/new_york.jpg')",
+        "new-york": "url('../img/new-york.jpg')",
         norway: "url('../img/norway.jpg')",
         sydney: "url('../img/sydney.jpg')",
         miami: "url('../img/miami.jpg')",
@@ -30,5 +35,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  variants: {
+    width: ["responsive", "hover", "focus"],
+    extend: {},
+  },
+  plugins: [require("tailwind-scrollbar-hide")],
 };

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+  @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition hover:-translate-y-4 hover:shadow-xl;
+}
+
+.card-cover {
+  @apply w-full h-3/5 rounded-t-lg bg-cover;
+}
+
+.card__info {
+  @apply w-full h-2/5 rounded-b-lg;
+}
+
+.card__info--green {
+  @apply bg-secondary text-white;
+}
+
+.card__info--white {
+  @apply bg-white text-tertiary;
+}
+
+.card__info__title {
+  @apply font-semibold text-lg px-4 py-2;
+}
+
+.card__info__subtitle {
+  @apply text-base px-4;
+}
