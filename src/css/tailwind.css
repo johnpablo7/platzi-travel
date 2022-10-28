@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Our Recomendations */
 .card {
   @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition hover:-translate-y-4 hover:shadow-xl;
 }
@@ -28,4 +29,18 @@
 
 .card__info__subtitle {
   @apply text-base px-4;
+}
+
+/* Trending Stays  */
+.cardTrending {
+  @apply w-full bg-cover rounded-2xl;
+  height: 402px;
+}
+
+.cardTrending__title {
+  @apply text-2xl px-8 pt-8 pb-2 font-semibold text-white;
+}
+
+.cardTrending__description {
+  @apply text-base pl-8 text-white mr-24;
 }

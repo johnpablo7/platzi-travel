@@ -514,8 +514,12 @@ video {
   position: absolute;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
+.relative {
+  position: relative;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .flex {
@@ -534,16 +538,16 @@ video {
   height: 100%;
 }
 
-.h-12 {
-  height: 3rem;
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-72 {
   height: 18rem;
 }
 
-.h-10 {
-  height: 2.5rem;
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-full {
@@ -574,16 +578,22 @@ video {
   justify-content: center;
 }
 
-.space-y-72 > :not([hidden]) ~ :not([hidden]) {
+.space-y-80 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(18rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(18rem * var(--tw-space-y-reverse));
+  margin-top: calc(20rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(20rem * var(--tw-space-y-reverse));
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-x-auto {
@@ -615,6 +625,22 @@ video {
   background-image: url('../img/new-york.jpg');
 }
 
+.bg-chicago {
+  background-image: url('../img/chicago.jpg');
+}
+
+.bg-la {
+  background-image: url('../img/la.jpg');
+}
+
+.bg-miami {
+  background-image: url('../img/miami.jpg');
+}
+
+.bg-bali {
+  background-image: url('../img/bali.jpg');
+}
+
 .p-3 {
   padding: 0.75rem;
 }
@@ -623,12 +649,21 @@ video {
   padding: 1rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pt-20 {
   padding-top: 5rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .text-center {
@@ -637,16 +672,6 @@ video {
 
 .font-Montserrat {
   font-family: Montserrat, sans-serif;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-lg {
@@ -703,6 +728,8 @@ video {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Our Recomendations */
 
 .card {
   height: 16rem;
@@ -772,6 +799,36 @@ video {
   padding-right: 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+/* Trending Stays  */
+
+.cardTrending {
+  width: 100%;
+  border-radius: 1rem;
+  background-size: cover;
+  height: 402px;
+}
+
+.cardTrending__title {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.cardTrending__description {
+  margin-right: 6rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus-within\:shadow-sm:focus-within {
