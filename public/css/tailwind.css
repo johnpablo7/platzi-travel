@@ -526,12 +526,16 @@ video {
   margin-top: 1.5rem;
 }
 
-.flex {
-  display: flex;
+.mt-4 {
+  margin-top: 1rem;
 }
 
-.h-screen {
-  height: 100vh;
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.flex {
+  display: flex;
 }
 
 .h-3\/4 {
@@ -548,6 +552,14 @@ video {
 
 .h-72 {
   height: 18rem;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .min-h-full {
@@ -606,6 +618,12 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -627,12 +645,29 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
 .bg-norway {
   background-image: url('../img/norway.jpg');
 }
 
 .bg-new-york {
   background-image: url('../img/new-york.jpg');
+}
+
+.bg-yosemite {
+  background-image: url('../img/yosemite.jpg');
+}
+
+.bg-seattle {
+  background-image: url('../img/seattle.jpg');
+}
+
+.bg-switzerland {
+  background-image: url('../img/switzerland.jpg');
 }
 
 .bg-chicago {
@@ -649,18 +684,6 @@ video {
 
 .bg-bali {
   background-image: url('../img/bali.jpg');
-}
-
-.bg-yosemite {
-  background-image: url('../img/yosemite.jpg');
-}
-
-.bg-seattle {
-  background-image: url('../img/seattle.jpg');
-}
-
-.bg-switzerland {
-  background-image: url('../img/switzerland.jpg');
 }
 
 .bg-europe {
@@ -685,6 +708,10 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-6 {
@@ -732,6 +759,16 @@ video {
   line-height: 1rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -743,6 +780,11 @@ video {
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(204 45 74 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .shadow-sm {
