@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,23 +26,34 @@
       <div id="home">
         <div class="w-full h-3/4 relative">
           <div
-            class="w-full h-full flex flex-col absolute space-y-80 pt-20 items-center"
+            class="w-full h-full flex flex-col absolute space-y-80 pt-20 items-center lg:space-y-0 lg:items-start lg:pt-[160px] justify-start"
           >
             <input
-              class="outline-none p-3 rounded-full shadow-sm w-48 h-10 text-center transition duration-500 ease-in-out focus-within:shadow-sm focus:ring-2 transform focus:w-11/12"
+              class="outline-none p-3 rounded-full shadow-sm w-48 h-10 text-center transition duration-500 ease-in-out focus-within:shadow-sm focus:ring-2 transform focus:w-11/12 lg:hidden"
               placeholder="San Francisco"
               type="search"
               name=""
               id=""
             />
+            <div class="hidden lg:w-[435px] h-auto lg:flex pb-8">
+              <p class="text-4xl ml-16 font-bold">
+                Find More Locations like this
+              </p>
+            </div>
             <button
-              class="bg-white text-lg text-primary font-semibold p-4 w-48 h-10 rounded-full items-center justify-center shadow-sm flex transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110"
+              class="bg-white text-lg text-primary font-semibold p-4 w-48 h-10 rounded-full items-center justify-center shadow-sm flex transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16"
             >
               Explore More
             </button>
           </div>
-          <div class="w-full h-full">
-            <img src="./img/san-francisco.jpg" alt="san-francisco" />
+          <div
+            class="w-full h-full lg:h-[597px] lg:bg-san-francisco-desktop lg:bg-cover lg:bg-center"
+          >
+            <img
+              class="lg:hidden"
+              src="./img/san-francisco.jpg"
+              alt="san-francisco"
+            />
           </div>
         </div>
       </div>
@@ -173,61 +184,63 @@
 
       <div class="w-full h-full" id="faqs">
         <div class="w-full h-full px-6 flex flex-col space-y-4">
-          <p class="text-2xl text-primary font-semibold mt-6">FAQs</p>
+          <p class="text-2xl text-primary mt-6 font-semibold">FAQs</p>
           <div>
-            <p class="text-base text-primary">Payment Methods</p>
-            <p class="text-xs pt-2">
+            <p class="text-base text-primary font-semibold">Payment Methods</p>
+            <p class="text-xs pt-2 font-semibold">
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
           <div>
-            <p class="text-base font-medium text-primary">
+            <p class="text-base font-semibold text-primary">
               Cancellation Policy
             </p>
-            <p class="text-xs pt-2">
+            <p class="text-xs pt-2 font-semibold">
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
           <div>
-            <p class="text-base font-medium text-primary">Long Stays</p>
-            <p class="text-xs pt-2">
+            <p class="text-base font-semibold text-primary">Long Stays</p>
+            <p class="text-xs pt-2 font-semibold">
               We accept VISA, MasterCard, American Express, Paypal and Binance
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
           <div>
-            <p class="text-base font-medium text-primary">
+            <p class="text-base font-semibold text-primary">
               Cancellation Policy
             </p>
-            <p class="text-xs pt-2">
+            <p class="text-xs pt-2 font-semibold">
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
           <div>
-            <p class="text-base font-medium text-primary">
+            <p class="text-base font-semibold text-primary">
               Cancellation Policy
             </p>
-            <p class="text-xs pt-2">
+            <p class="text-xs pt-2 font-semibold">
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
         </div>
       </div>
     </section>
-    <footer class="w-full h-auto bg-gray-50 p-6 space-y-2 mt-8 text-gray-300">
-      <p class="text-xl">About Us</p>
-      <p class="text-sm">Investors</p>
-      <p class="text-sm">Jobs</p>
-      <p class="text-sm">Privacy policy</p>
-      <p class="text-sm">Terms and Conditions</p>
-      <p class="text-sm">Platzi Travel, inc</p>
-      <p class="text-sm">Follow Us</p>
+    <footer
+      class="w-full h-auto bg-gray-50 p-6 space-y-2 mt-8 text-gray-300 mb-16"
+    >
+      <p class="text-xl font-semibold">About Us</p>
+      <p class="text-sm font-medium">Investors</p>
+      <p class="text-sm font-medium">Jobs</p>
+      <p class="text-sm font-medium">Privacy policy</p>
+      <p class="text-sm font-medium">Terms and Conditions</p>
+      <p class="text-sm font-medium">Platzi Travel, inc</p>
+      <p class="text-sm font-medium">Follow Us</p>
       <i class="fa-brands fa-twitter mr-1"></i>
       <i class="fa-brands fa-instagram"></i>
     </footer>
     <div
       id="tab_bar"
-      class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md items-center justify-center space-x-10"
+      class="flex w-full h-16 bg-white fixed left-0 bottom-0 shadow-md items-center justify-center gap-10 lg:hidden"
     >
       <a href="#home">
         <i class="fa-solid fa-house text-xl text-gray-200"></i>

@@ -8,7 +8,7 @@
 }
 
 .card-cover {
-  @apply w-full h-3/5 rounded-t-lg bg-cover;
+  @apply w-full h-3/5 rounded-t-lg bg-cover bg-center;
 }
 
 .card__info {
