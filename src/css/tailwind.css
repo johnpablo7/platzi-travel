@@ -33,14 +33,33 @@
 
 /* Trending Stays  */
 .cardTrending {
-  @apply w-full bg-cover rounded-2xl;
-  height: 402px;
+  @apply w-full h-full bg-cover bg-center rounded-2xl lg:bg-center lg:row-span-2 lg:col-span-2;
+}
+
+.cardTrending--chicago {
+  @apply bg-chicago lg:aspect-[2/1] aspect-[8/10];
+}
+
+.cardTrending--la {
+  @apply bg-la lg:aspect-[3/5] aspect-[8/10] lg:row-span-2 lg:col-span-2;
+}
+
+.cardTrending--miami {
+  @apply bg-miami lg:aspect-[19/10] aspect-[8/10] lg:row-span-1 lg:col-span-3;
+}
+
+.cardTrending--bali {
+  @apply bg-bali lg:aspect-[19/10] aspect-[8/10] lg:row-span-1 lg:col-span-3;
+}
+
+.cardTrending__box {
+  @apply lg:text-right lg:ml-auto lg:mr-10;
 }
 
 .cardTrending__title {
-  @apply text-2xl px-8 pt-8 pb-2 font-semibold text-white;
+  @apply text-2xl pt-12 pb-4 pl-8 font-semibold text-white lg:text-4xl lg:pt-8;
 }
 
 .cardTrending__description {
-  @apply text-base pl-8 text-white mr-24;
+  @apply text-base pl-8 text-white mr-24 lg:text-2xl lg:m-auto;
 }

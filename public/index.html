@@ -20,8 +20,26 @@
     />
     <title>Platzi Travel</title>
   </head>
+
   <body class="font-Montserrat">
-    <nav></nav>
+    <nav class="w-full h-14 hidden bg-white lg:flex p-4">
+      <div class="h-auto w-auto">
+        <p class="text-xl text-primary font-black">Platzi Travel</p>
+      </div>
+
+      <div>
+        <a class="font-bold text-xl text-primary" href="#home">Locations</a>
+        <a class="font-bold text-xl text-primary" href="#our_recomendations"
+          >Recomendations</a
+        >
+        <a class="font-bold text-xl text-primary" href="#trending_stays"
+          >Stays</a
+        >
+        <a class="font-bold text-xl text-primary" href="#faqs">FAQS</a>
+        <a class="font-bold text-xl text-primary" href="#about-us">About Us</a>
+      </div>
+    </nav>
+
     <section class="w-full min-h-screen">
       <div id="home">
         <div class="w-full h-3/4 relative">
@@ -41,7 +59,7 @@
               </p>
             </div>
             <button
-              class="bg-white text-lg text-primary font-semibold p-4 w-48 h-10 rounded-full items-center justify-center shadow-sm flex transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16"
+              class="bg-white text-lg text-primary font-bold p-4 w-48 h-10 rounded-full items-center justify-center shadow-sm flex transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16"
             >
               Explore More
             </button>
@@ -150,34 +168,50 @@
         </div>
       </div>
 
-      <div class="px-6 h-full w-full" id="trending_stays">
-        <p class="text-2xl text-primary font-semibold pb-6">Trending Stays</p>
+      <div id="trending_stays" class="px-6">
+        <p class="text-2xl text-primary font-semibold">Trending Stays</p>
+
         <div
-          class="w-full min-h-full flex flex-col space-y-6 items-center justify-center"
+          class="w-full min-h-full flex flex-col space-y-6 items-center justify-center mt-6"
         >
-          <div class="cardTrending bg-chicago">
-            <p class="cardTrending__title">Chicago</p>
-            <p class="cardTrending__description">
-              2 rooms, bathroom and kitchen.
-            </p>
+          <div class="cardTrending cardTrending--chicago">
+            <div class="cardTrending__box">
+              <p class="cardTrending__title">Chicago</p>
+              <p class="cardTrending__description">
+                2 rooms, bathroom and kitchen.
+              </p>
+            </div>
           </div>
-          <div class="cardTrending bg-la">
-            <p class="cardTrending__title">Los Angeles</p>
-            <p class="cardTrending__description">
-              4 rooms, 3 bathrooms, kitchen and private pool.
-            </p>
-          </div>
-          <div class="cardTrending bg-miami">
-            <p class="cardTrending__title">Miami</p>
-            <p class="cardTrending__description">
-              3 rooms, 2 bathrooms, kitchen and amazing sea view.
-            </p>
-          </div>
-          <div class="cardTrending bg-bali">
-            <p class="cardTrending__title">Bali</p>
-            <p class="cardTrending__description">
-              2 rooms, 2 bathrooms, kitchen and privatepool.
-            </p>
+
+          <div
+            class="w-full h-full grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center gap-5"
+          >
+            <div class="cardTrending cardTrending--la">
+              <div class="cardTrending__box lg:w-[300px]">
+                <p class="cardTrending__title">Los Angeles</p>
+                <p class="cardTrending__description">
+                  4 rooms, 3 bathrooms, kitchen and private pool.
+                </p>
+              </div>
+            </div>
+
+            <div class="cardTrending cardTrending--miami">
+              <div class="cardTrending__box lg:w-[400px]">
+                <p class="cardTrending__title">Miami</p>
+                <p class="cardTrending__description">
+                  3 rooms, 2 bathrooms, kitchen and amazing sea view.
+                </p>
+              </div>
+            </div>
+
+            <div class="cardTrending cardTrending--bali">
+              <div class="cardTrending__box lg:w-[380px]">
+                <p class="cardTrending__title">Bali</p>
+                <p class="cardTrending__description">
+                  2 rooms, 2 bathrooms, kitchen and privatepool.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -227,6 +261,7 @@
     </section>
     <footer
       class="w-full h-auto bg-gray-50 p-6 space-y-2 mt-8 text-gray-300 mb-16"
+      id="about-us"
     >
       <p class="text-xl font-semibold">About Us</p>
       <p class="text-sm font-medium">Investors</p>
