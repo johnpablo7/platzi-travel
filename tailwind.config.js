@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  content: ["./public/index.html", "./src/**/*.{html,js,jsx,ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -8,7 +9,7 @@ module.exports = {
         secondary: "#8FA206",
         tertiary: "#61AEC9",
       },
-      backgroundColor: {
+      textColor: {
         primary: "#CC2D4A",
         secondary: "#8FA206",
         tertiary: "#61AEC9",

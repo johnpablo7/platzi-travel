@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,65 +21,95 @@
     <title>Platzi Travel</title>
   </head>
 
-  <body class="font-Montserrat">
-    <nav class="w-full h-14 hidden bg-white lg:flex p-4">
+  <body class="font-Montserrat dark:bg-gray-900">
+    <nav
+      class="w-full h-14 hidden bg-white lg:flex p-4 justify-between lg:z-10 border-b-4 border-b-rose-100 fixed dark:bg-gray-800"
+    >
       <div class="h-auto w-auto">
-        <p class="text-xl text-primary font-black">Platzi Travel</p>
+        <p class="nav-items">Platzi Travel</p>
       </div>
 
-      <div>
-        <a class="font-bold text-xl text-primary" href="#home">Locations</a>
-        <a class="font-bold text-xl text-primary" href="#our_recomendations"
-          >Recomendations</a
-        >
-        <a class="font-bold text-xl text-primary" href="#trending_stays"
-          >Stays</a
-        >
-        <a class="font-bold text-xl text-primary" href="#faqs">FAQS</a>
-        <a class="font-bold text-xl text-primary" href="#about-us">About Us</a>
+      <div class="flex space-x-8">
+        <a class="nav-items" href="#home">Locations</a>
+        <a class="nav-items" href="#our_recomendations">Recomendations</a>
+        <a class="nav-items" href="#trending_stays">Stays</a>
+        <a class="nav-items" href="#faqs">FAQS</a>
+        <a class="nav-items" href="#about-us">About Us</a>
+      </div>
+      <div class="flex space-x-4">
+        <a href="#our_recomendations">
+          <i class="nav-items fa-solid fa-magnifying-glass"></i>
+        </a>
+        <button id="toggle">
+          <i class="nav-icons fa-sharp fa-solid fa-moon"></i>
+        </button>
+        <a href="#home">
+          <i class="nav-icons fa-solid fa-user"></i>
+        </a>
       </div>
     </nav>
 
     <section class="w-full min-h-screen">
-      <div id="home">
-        <div class="w-full h-3/4 relative">
+      <div class="w-full h-3/4 relative" id="home">
+        <div
+          class="absolute w-full h-full flex px-9 flex-col space-y-80 pt-20 items-center lg:space-y-0 lg:items-start lg:pt-[160px] justify-start"
+        >
           <div
-            class="w-full h-full flex flex-col absolute space-y-80 pt-20 items-center lg:space-y-0 lg:items-start lg:pt-[160px] justify-start"
+            class="relative flex justify-end items-center lg:hidden text-lg w-full"
           >
             <input
-              class="outline-none p-3 rounded-full shadow-sm w-48 h-10 text-center transition duration-500 ease-in-out focus-within:shadow-sm focus:ring-2 transform focus:w-11/12 lg:hidden"
+              class="outline-none py-2 rounded-full shadow-sm w-full h-10 text-center transition duration-300 focus-within:shadow-sm focus:ring-2 focus:placeholder:text-gray-600 placeholder:text-black"
               placeholder="San Francisco"
               type="search"
-              name=""
-              id=""
+              name="search"
+              autocomplete="off"
             />
-            <div class="hidden lg:w-[435px] h-auto lg:flex pb-8">
-              <p class="text-4xl ml-16 font-bold">
-                Find More Locations like this
-              </p>
-            </div>
-            <button
-              class="bg-white text-lg text-primary font-bold p-4 w-48 h-10 rounded-full items-center justify-center shadow-sm flex transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16"
-            >
-              Explore More
-            </button>
+
+            <i
+              class="absolute text-primary text-lg fa-solid fa-magnifying-glass inset-y-0 left-0 p-3 pl-6 flex items-center"
+            ></i>
           </div>
-          <div
-            class="w-full h-full lg:h-[597px] lg:bg-san-francisco-desktop lg:bg-cover lg:bg-center"
+
+          <div class="hidden lg:w-[435px] h-auto lg:flex pb-8">
+            <p class="text-4xl ml-16 font-bold">
+              Find More Locations like this
+            </p>
+          </div>
+
+          <button
+            class="bg-white text-lg text-primary font-bold p-4 w-48 h-10 rounded-full items-center justify-center shadow-sm flex transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16"
           >
-            <img
-              class="lg:hidden"
-              src="./img/san-francisco.jpg"
-              alt="san-francisco"
-            />
-          </div>
+            Explore More
+          </button>
+        </div>
+
+        <!-- boton luna modo oscuro -->
+        <button
+          id="toggle-sm"
+          class="absolute text-primary bg-white px-5 py-1 mt-5 mr-5 rounded-2xl top-0 right-0"
+        >
+          <i class="fa-sharp fa-solid fa-moon"></i>
+        </button>
+
+        <div
+          class="w-full h-full lg:h-[597px] lg:bg-san-francisco-desktop lg:bg-cover lg:bg-center"
+        >
+          <img
+            class="lg:hidden"
+            src="./img/san-francisco.jpg"
+            alt="san-francisco"
+          />
         </div>
       </div>
 
       <div class="p-5" id="our_recomendations">
-        <p class="text-2xl font-semibold text-primary">Our Recomendations</p>
+        <p
+          class="text-2xl lg:text-3xl font-semibold text-primary dark:text-white lg:mt-5"
+        >
+          Our Recomendations
+        </p>
         <div
-          class="w-auto h-72 items-center mt-2 overflow-x-auto overscroll-x-contain scrollbar-hide flex space-x-4 overflow-y-hidden"
+          class="w-auto h-72 lg:h-96 items-center overflow-x-auto overscroll-x-contain scrollbar-hide flex space-x-4 overflow-y-hidden"
         >
           <div class="card">
             <div class="card-cover bg-norway"></div>
@@ -169,7 +199,11 @@
       </div>
 
       <div id="trending_stays" class="px-6">
-        <p class="text-2xl text-primary font-semibold">Trending Stays</p>
+        <p
+          class="text-2xl lg:text-3xl text-primary font-semibold dark:text-white"
+        >
+          Trending Stays
+        </p>
 
         <div
           class="w-full min-h-full flex flex-col space-y-6 items-center justify-center mt-6"
@@ -218,41 +252,39 @@
 
       <div class="w-full h-full" id="faqs">
         <div class="w-full h-full px-6 flex flex-col space-y-4">
-          <p class="text-2xl text-primary mt-6 font-semibold">FAQs</p>
+          <p
+            class="text-2xl lg:text-3xl text-primary mt-5 font-semibold dark:text-white lg:mt-14 lg:mb-3"
+          >
+            FAQs
+          </p>
           <div>
-            <p class="text-base text-primary font-semibold">Payment Methods</p>
-            <p class="text-xs pt-2 font-semibold">
+            <p class="faqs__title">Payment Methods</p>
+            <p class="faqs__description">
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
           <div>
-            <p class="text-base font-semibold text-primary">
-              Cancellation Policy
-            </p>
-            <p class="text-xs pt-2 font-semibold">
+            <p class="faqs__title">Cancellation Policy</p>
+            <p class="faqs__description">
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
           <div>
-            <p class="text-base font-semibold text-primary">Long Stays</p>
-            <p class="text-xs pt-2 font-semibold">
+            <p class="faqs__title">Long Stays</p>
+            <p class="faqs__description">
               We accept VISA, MasterCard, American Express, Paypal and Binance
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
           <div>
-            <p class="text-base font-semibold text-primary">
-              Cancellation Policy
-            </p>
-            <p class="text-xs pt-2 font-semibold">
+            <p class="faqs__title">Cancellation Policy</p>
+            <p class="faqs__description">
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
           <div>
-            <p class="text-base font-semibold text-primary">
-              Cancellation Policy
-            </p>
-            <p class="text-xs pt-2 font-semibold">
+            <p class="faqs__title">Cancellation Policy</p>
+            <p class="faqs__description">
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
@@ -260,22 +292,22 @@
       </div>
     </section>
     <footer
-      class="w-full h-auto bg-gray-50 p-6 space-y-2 mt-8 text-gray-300 mb-16"
+      class="w-full h-auto bg-gray-50 p-6 mt-8 text-gray-300 mb-16 lg:mb-0"
       id="about-us"
     >
-      <p class="text-xl font-semibold">About Us</p>
-      <p class="text-sm font-medium">Investors</p>
-      <p class="text-sm font-medium">Jobs</p>
-      <p class="text-sm font-medium">Privacy policy</p>
-      <p class="text-sm font-medium">Terms and Conditions</p>
-      <p class="text-sm font-medium">Platzi Travel, inc</p>
-      <p class="text-sm font-medium">Follow Us</p>
-      <i class="fa-brands fa-twitter mr-1"></i>
-      <i class="fa-brands fa-instagram"></i>
+      <p class="text-lg lg:text-2xl font-bold lg:mb-6 mb-4">About Us</p>
+      <p class="about__text">Investors</p>
+      <p class="about__text">Jobs</p>
+      <p class="about__text">Privacy policy</p>
+      <p class="about__text">Terms and Conditions</p>
+      <p class="about__text">Platzi Travel, inc</p>
+      <p class="about__text">Follow Us</p>
+      <i class="fa-brands fa-twitter mr-1 lg:text-2xl"></i>
+      <i class="fa-brands fa-instagram lg:text-2xl"></i>
     </footer>
     <div
       id="tab_bar"
-      class="flex w-full h-16 bg-white fixed left-0 bottom-0 shadow-md items-center justify-center gap-10 lg:hidden"
+      class="flex w-full h-16 bg-white fixed left-0 bottom-0 shadow-md items-center justify-center gap-10 lg:hidden dark:bg-gray-800"
     >
       <a href="#home">
         <i class="fa-solid fa-house text-xl text-gray-200"></i>
@@ -286,9 +318,26 @@
       <a href="#trending_stays">
         <i class="fa-solid fa-heart text-xl text-gray-200"></i>
       </a>
+      <button id="toggle-sm">
+        <i class="fa-sharp fa-solid text-xl fa-moon text-gray-200"></i>
+      </button>
       <a href="#home">
         <i class="fa-solid fa-user text-xl text-gray-200"></i>
       </a>
     </div>
+    <script>
+      const htmlElement = document.querySelector("html");
+      const toggleButton = document.querySelector("#toggle");
+      const toggleButtonSm = document.querySelector("#toggle-sm");
+
+      toggleButton.addEventListener("click", () => toggleDarkMode());
+      toggleButtonSm.addEventListener("click", () => toggleDarkMode());
+
+      const toggleDarkMode = () => {
+        htmlElement.classList.contains("dark")
+          ? htmlElement.classList.remove("dark")
+          : htmlElement.classList.add("dark");
+      };
+    </script>
   </body>
 </html>

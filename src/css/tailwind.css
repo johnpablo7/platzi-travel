@@ -4,7 +4,7 @@
 
 /* Our Recomendations */
 .card {
-  @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition hover:-translate-y-4 hover:shadow-xl;
+  @apply w-48 h-64 lg:h-[335px] lg:w-[277px] shadow-md rounded-lg lg:rounded-lg flex-none transform transition hover:-translate-y-4 hover:shadow-xl;
 }
 
 .card-cover {
@@ -16,19 +16,19 @@
 }
 
 .card__info--green {
-  @apply bg-secondary text-white;
+  @apply bg-secondary text-white dark:bg-gray-700;
 }
 
 .card__info--white {
-  @apply bg-white text-tertiary;
+  @apply bg-white text-tertiary dark:bg-gray-800;
 }
 
 .card__info__title {
-  @apply font-semibold text-lg px-4 py-2;
+  @apply font-semibold text-lg px-4 py-2 dark:text-white;
 }
 
 .card__info__subtitle {
-  @apply text-base px-4;
+  @apply text-base px-4 dark:text-gray-300;
 }
 
 /* Trending Stays  */
@@ -57,9 +57,32 @@
 }
 
 .cardTrending__title {
-  @apply text-2xl pt-12 pb-4 pl-8 font-semibold text-white lg:text-4xl lg:pt-8;
+  @apply text-2xl pt-12 pb-4 pl-8 font-semibold text-white lg:text-4xl lg:pt-8 dark:text-black lg:font-bold;
 }
 
 .cardTrending__description {
-  @apply text-base pl-8 text-white mr-24 lg:text-2xl lg:m-auto;
+  @apply text-base pl-8 text-white mr-24 lg:text-2xl lg:m-auto lg:font-medium;
+}
+
+/* Navbar */
+.nav-items {
+  @apply font-bold text-xl text-primary dark:text-white;
+}
+
+.nav-icons {
+  @apply text-xl text-gray-200 dark:text-white;
+}
+
+/* Footer */
+.faqs__title {
+  @apply text-base lg:text-2xl text-primary font-semibold dark:text-white;
+}
+
+.faqs__description {
+  @apply text-xs pt-2 font-medium lg:text-xl dark:text-gray-300 lg:font-medium;
+}
+
+/* About-Us */
+.about__text {
+  @apply text-sm font-medium lg:text-xl mb-3 lg:mb-4;
 }
