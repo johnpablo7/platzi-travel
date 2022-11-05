@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Platzi Travel</title>
+  </head>
+
+  <body class="font-Montserrat dark:bg-gray-900">
+    <nav
+      class="w-full h-14 hidden bg-white lg:flex p-4 justify-between lg:z-10 border-b-4 border-b-rose-100 fixed dark:bg-gray-800"
+    >
+      <div class="h-auto w-auto">
+        <p class="nav-items">Platzi Travel</p>
+      </div>
+
+      <div class="flex space-x-8">
+        <a class="nav-items" href="#home">Locations</a>
+        <a class="nav-items" href="#our_recomendations">Recomendations</a>
+        <a class="nav-items" href="#trending_stays">Stays</a>
+        <a class="nav-items" href="#faqs">FAQS</a>
+        <a class="nav-items" href="#about-us">About Us</a>
+      </div>
+      <div class="flex space-x-4">
+        <a href="#our_recomendations">
+          <i class="nav-items fa-solid fa-magnifying-glass"></i>
+        </a>
+        <button id="toggle">
+          <i class="nav-icons fa-sharp fa-solid fa-moon"></i>
+        </button>
+        <a href="#home">
+          <i class="nav-icons fa-solid fa-user"></i>
+        </a>
+      </div>
+    </nav>
+
+    <section class="w-full min-h-screen">
+      <div class="w-full h-3/4 relative" id="home">
+        <div
+          class="absolute w-full h-full flex px-9 flex-col space-y-80 pt-20 items-center lg:space-y-0 lg:items-start lg:pt-[160px] justify-start"
+        >
+          <div
+            class="relative flex justify-end items-center lg:hidden text-lg w-full"
+          >
+            <input
+              class="outline-none py-2 rounded-full shadow-sm w-full h-10 text-center transition duration-300 focus-within:shadow-sm focus:ring-2 focus:placeholder:text-gray-600 placeholder:text-black"
+              placeholder="San Francisco"
+              type="search"
+              name="search"
+              autocomplete="off"
+            />
+
+            <i
+              class="absolute text-primary text-lg fa-solid fa-magnifying-glass inset-y-0 left-0 p-3 pl-6 flex items-center"
+            ></i>
+          </div>
+
+          <div class="hidden lg:w-[435px] h-auto lg:flex pb-8">
+            <p class="text-4xl ml-16 font-bold">
+              Find More Locations like this
+            </p>
+          </div>
+
+          <button
+            class="bg-white text-lg text-primary font-bold p-4 w-48 h-10 rounded-full items-center justify-center shadow-sm flex transition duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16"
+          >
+            Explore More
+          </button>
+        </div>
+
+        <!-- boton luna modo oscuro -->
+        <button
+          id="toggle-sm"
+          class="absolute text-primary bg-white px-5 py-1 mt-5 mr-5 rounded-2xl top-0 right-0"
+        >
+          <i class="fa-sharp fa-solid fa-moon"></i>
+        </button>
+
+        <div
+          class="w-full h-full lg:h-[597px] lg:bg-san-francisco-desktop lg:bg-cover lg:bg-center"
+        >
+          <img
+            class="lg:hidden"
+            src="./img/san-francisco.jpg"
+            alt="san-francisco"
+          />
+        </div>
+      </div>
+
+      <div class="p-5" id="our_recomendations">
+        <p
+          class="text-2xl lg:text-3xl font-semibold text-primary dark:text-white lg:mt-5"
+        >
+          Our Recomendations
+        </p>
+        <div
+          class="w-auto h-72 lg:h-96 items-center overflow-x-auto overscroll-x-contain scrollbar-hide flex space-x-4 overflow-y-hidden"
+        >
+          <div class="card">
+            <div class="card-cover bg-norway"></div>
+            <div class="card__info card__info--green">
+              <p class="card__info__title">Norway</p>
+              <p class="card__info__subtitle">Beautiful landscapes</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-new-york"></div>
+            <div class="card__info card__info--white">
+              <p class="card__info__title">New York</p>
+              <p class="card__info__subtitle">Concrete jungle</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-yosemite"></div>
+            <div class="card__info card__info--green">
+              <p class="card__info__title">Yosemite</p>
+              <p class="card__info__subtitle">A break from the world</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-seattle"></div>
+            <div class="card__info card__info--white">
+              <p class="card__info__title">Seattle</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-switzerland"></div>
+            <div class="card__info card__info--green">
+              <p class="card__info__title">Switzerland</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-chicago"></div>
+            <div class="card__info card__info--white">
+              <p class="card__info__title">Chicago</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-la"></div>
+            <div class="card__info card__info--green">
+              <p class="card__info__title">Los Angeles</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-miami"></div>
+            <div class="card__info card__info--white">
+              <p class="card__info__title">Miami</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-bali"></div>
+            <div class="card__info card__info--green">
+              <p class="card__info__title">Bali</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-europe"></div>
+            <div class="card__info card__info--white">
+              <p class="card__info__title">Europe</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-iceland"></div>
+            <div class="card__info card__info--green">
+              <p class="card__info__title">Iceland</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-cover bg-sydney"></div>
+            <div class="card__info card__info--white">
+              <p class="card__info__title">Sydney</p>
+              <p class="card__info__subtitle">Big City</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="trending_stays" class="px-6">
+        <p
+          class="text-2xl lg:text-3xl text-primary font-semibold dark:text-white"
+        >
+          Trending Stays
+        </p>
+
+        <div
+          class="w-full min-h-full flex flex-col space-y-6 items-center justify-center mt-6"
+        >
+          <div class="cardTrending cardTrending--chicago">
+            <div class="cardTrending__box">
+              <p class="cardTrending__title">Chicago</p>
+              <p class="cardTrending__description">
+                2 rooms, bathroom and kitchen.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-full h-full grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center gap-5"
+          >
+            <div class="cardTrending cardTrending--la">
+              <div class="cardTrending__box lg:w-[300px]">
+                <p class="cardTrending__title">Los Angeles</p>
+                <p class="cardTrending__description">
+                  4 rooms, 3 bathrooms, kitchen and private pool.
+                </p>
+              </div>
+            </div>
+
+            <div class="cardTrending cardTrending--miami">
+              <div class="cardTrending__box lg:w-[400px]">
+                <p class="cardTrending__title">Miami</p>
+                <p class="cardTrending__description">
+                  3 rooms, 2 bathrooms, kitchen and amazing sea view.
+                </p>
+              </div>
+            </div>
+
+            <div class="cardTrending cardTrending--bali">
+              <div class="cardTrending__box lg:w-[380px]">
+                <p class="cardTrending__title">Bali</p>
+                <p class="cardTrending__description">
+                  2 rooms, 2 bathrooms, kitchen and privatepool.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-full" id="faqs">
+        <div class="w-full h-full px-6 flex flex-col space-y-4">
+          <p
+            class="text-2xl lg:text-3xl text-primary mt-5 font-semibold dark:text-white lg:mt-14 lg:mb-3"
+          >
+            FAQs
+          </p>
+          <div>
+            <p class="faqs__title">Payment Methods</p>
+            <p class="faqs__description">
+              We accept VISA, MasterCard, American Express, Paypal and Binance
+            </p>
+          </div>
+          <div>
+            <p class="faqs__title">Cancellation Policy</p>
+            <p class="faqs__description">
+              We accept VISA, MasterCard, American Express, Paypal and Binance
+            </p>
+          </div>
+          <div>
+            <p class="faqs__title">Long Stays</p>
+            <p class="faqs__description">
+              We accept VISA, MasterCard, American Express, Paypal and Binance
+              We accept VISA, MasterCard, American Express, Paypal and Binance
+            </p>
+          </div>
+          <div>
+            <p class="faqs__title">Cancellation Policy</p>
+            <p class="faqs__description">
+              We accept VISA, MasterCard, American Express, Paypal and Binance
+            </p>
+          </div>
+          <div>
+            <p class="faqs__title">Cancellation Policy</p>
+            <p class="faqs__description">
+              We accept VISA, MasterCard, American Express, Paypal and Binance
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="w-full h-auto bg-gray-50 p-6 mt-8 text-gray-300 mb-16 lg:mb-0"
+      id="about-us"
+    >
+      <p class="text-lg lg:text-2xl font-bold lg:mb-6 mb-4">About Us</p>
+      <p class="about__text">Investors</p>
+      <p class="about__text">Jobs</p>
+      <p class="about__text">Privacy policy</p>
+      <p class="about__text">Terms and Conditions</p>
+      <p class="about__text">Platzi Travel, inc</p>
+      <p class="about__text">Follow Us</p>
+      <i class="fa-brands fa-twitter mr-1 lg:text-2xl"></i>
+      <i class="fa-brands fa-instagram lg:text-2xl"></i>
+    </footer>
+    <div
+      id="tab_bar"
+      class="flex w-full h-16 bg-white fixed left-0 bottom-0 shadow-md items-center justify-center gap-10 lg:hidden dark:bg-gray-800"
+    >
+      <a href="#home">
+        <i class="fa-solid fa-house text-xl text-gray-200"></i>
+      </a>
+      <a href="#our_recomendations">
+        <i class="fa-solid fa-magnifying-glass text-xl text-primary"></i>
+      </a>
+      <a href="#trending_stays">
+        <i class="fa-solid fa-heart text-xl text-gray-200"></i>
+      </a>
+      <button id="toggle-sm">
+        <i class="fa-sharp fa-solid text-xl fa-moon text-gray-200"></i>
+      </button>
+      <a href="#home">
+        <i class="fa-solid fa-user text-xl text-gray-200"></i>
+      </a>
+    </div>
+    <script>
+      const htmlElement = document.querySelector("html");
+      const toggleButton = document.querySelector("#toggle");
+      const toggleButtonSm = document.querySelector("#toggle-sm");
+
+      toggleButton.addEventListener("click", () => toggleDarkMode());
+      toggleButtonSm.addEventListener("click", () => toggleDarkMode());
+
+      const toggleDarkMode = () => {
+        htmlElement.classList.contains("dark")
+          ? htmlElement.classList.remove("dark")
+          : htmlElement.classList.add("dark");
+      };
+    </script>
+  </body>
+</html>
