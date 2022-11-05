@@ -2,19 +2,23 @@
   "name": "platzi-travel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tw:build": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
+    "tw:build": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch",
+    "predeploy": "npm run tw:build",
+    "deploy": "gh-pages -d tw:build"
   },
   "author": "John Pablo Valverde",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.12",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.2.1"
   },
   "dependencies": {
     "tailwind-scrollbar-hide": "^1.1.7"
-  }
+  },
+  "homepage": "https://github.com/johnpablo7/platzi-travel.git"
 }
