@@ -5,9 +5,10 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tw:build": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch",
-    "predeploy": "npm run tw:build",
-    "deploy": "gh-pages -d tw:build"
+    "watch": "tailwindcss -i ./src/css/tailwind.css -o ./docs/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/css/tailwind.css -o ./docs/css/tailwind.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "John Pablo Valverde",
   "license": "MIT",
