@@ -273,6 +273,7 @@
             <p class="faqs__title">Long Stays</p>
             <p class="faqs__description">
               We accept VISA, MasterCard, American Express, Paypal and Binance
+              <br />
               We accept VISA, MasterCard, American Express, Paypal and Binance
             </p>
           </div>
@@ -318,7 +319,7 @@
       <a href="#trending_stays">
         <i class="fa-solid fa-heart text-xl text-gray-200"></i>
       </a>
-      <button id="toggle">
+      <button id="toggle-sm2">
         <i class="fa-sharp fa-solid text-xl fa-moon text-gray-200"></i>
       </button>
       <a href="#home">
@@ -329,9 +330,11 @@
       const htmlElement = document.querySelector("html");
       const toggleButton = document.querySelector("#toggle");
       const toggleButtonSm = document.querySelector("#toggle-sm");
+      const toggleButtonSm2 = document.querySelector("#toggle-sm2");
 
       toggleButton.addEventListener("click", () => toggleDarkMode());
       toggleButtonSm.addEventListener("click", () => toggleDarkMode());
+      toggleButtonSm2.addEventListener("click", () => toggleDarkMode());
 
       const toggleDarkMode = () => {
         htmlElement.classList.contains("dark")
